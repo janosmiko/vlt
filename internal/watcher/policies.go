@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/dkyanakiev/vaulty/internal/models"
+	"github.com/janosmiko/vlt/internal/models"
 )
 
 func (w *Watcher) SubscribeToPolicies(notify func()) {

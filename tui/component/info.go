@@ -3,8 +3,8 @@ package component
 import (
 	"github.com/rivo/tview"
 
-	primitive "github.com/dkyanakiev/vaulty/tui/primitives"
-	"github.com/dkyanakiev/vaulty/tui/styles"
+	primitive "github.com/janosmiko/vlt/tui/primitives"
+	"github.com/janosmiko/vlt/tui/styles"
 )
 
 const PageNameInfo = "info"

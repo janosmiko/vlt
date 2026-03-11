@@ -7,12 +7,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dkyanakiev/vaulty/internal/config"
-	"github.com/dkyanakiev/vaulty/internal/state"
-	"github.com/dkyanakiev/vaulty/internal/vault"
-	"github.com/dkyanakiev/vaulty/internal/watcher"
-	"github.com/dkyanakiev/vaulty/tui/component"
-	"github.com/dkyanakiev/vaulty/tui/view"
+	"github.com/janosmiko/vlt/internal/config"
+	"github.com/janosmiko/vlt/internal/state"
+	"github.com/janosmiko/vlt/internal/vault"
+	"github.com/janosmiko/vlt/internal/watcher"
+	"github.com/janosmiko/vlt/tui/component"
+	"github.com/janosmiko/vlt/tui/view"
 	"github.com/gdamore/tcell/v2"
 	"github.com/jessevdk/go-flags"
 	"github.com/rivo/tview"
@@ -34,14 +34,14 @@ func main() {
 	}
 
 	if opts.Version {
-		fmt.Println("vaul7y", strings.TrimPrefix(version, "v"))
+		fmt.Println("vlt", strings.TrimPrefix(version, "v"))
 		os.Exit(0)
 	}
 
 	// Check for required Vault env vars
 	cfg := config.LoadConfig(opts.ConfigFile)
 
-	logFile, logger := config.SetupLogger(cfg.VaultyLogLevel, cfg.VaultyLogFile)
+	logFile, logger := config.SetupLogger(cfg.VltLogLevel, cfg.VltLogFile)
 	defer logFile.Close()
 	tview.Styles.PrimitiveBackgroundColor = tcell.NewRGBColor(40, 44, 48)
 
@@ -53,7 +53,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	refreshIntervalDefault := time.Duration(cfg.VaultyRefreshRate) * time.Second
+	refreshIntervalDefault := time.Duration(cfg.VltRefreshRate) * time.Second
 	state := initializeState(vaultClient, cfg.VaultNamespace)
 	toggles := component.NewTogglesInfo()
 	selections := component.NewSelections(state)

@@ -4,8 +4,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/dkyanakiev/vaulty/tui/component"
-	"github.com/dkyanakiev/vaulty/tui/component/componentfakes"
+	"github.com/janosmiko/vlt/tui/component"
+	"github.com/janosmiko/vlt/tui/component/componentfakes"
 	"github.com/rivo/tview"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

@@ -1,7 +1,7 @@
 package state
 
 import (
-	"github.com/dkyanakiev/vaulty/internal/models"
+	"github.com/janosmiko/vlt/internal/models"
 	"github.com/hashicorp/vault/api"
 	"github.com/rivo/tview"
 )

@@ -12,13 +12,13 @@ $ make setup-test-data
 ```
     * Note: This requires Vault tokent to be set in order to be able to write to Vault
 
-3. Configure the env variables required to auth to vault or `.vaul7y.yaml` in your home directory
+3. Configure the env variables required to auth to vault or `.vlt.yaml` in your home directory
 
 4. Make sure to set    
-`VAULTY_LOG_FILE` env variable and point to a file, to log to a file 
-`VAULTY_LOG_LEVEL` env variable - define the log level you want to use
+`VLT_LOG_FILE` env variable and point to a file, to log to a file 
+`VLT_LOG_LEVEL` env variable - define the log level you want to use
 
 ```
-❯ export VAULTY_LOG_LEVEL=debug
-❯ export VAULTY_LOG_FILE=/tmp/my-vault-log.log
+❯ export VLT_LOG_LEVEL=debug
+❯ export VLT_LOG_FILE=/tmp/my-vault-log.log
 ```

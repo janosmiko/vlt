@@ -3,8 +3,8 @@ package vault
 import (
 	"context"
 
-	"github.com/dkyanakiev/vaulty/internal/config"
-	"github.com/dkyanakiev/vaulty/internal/models"
+	"github.com/janosmiko/vlt/internal/config"
+	"github.com/janosmiko/vlt/internal/models"
 	"github.com/hashicorp/vault/api"
 	"github.com/rs/zerolog"
 )
@@ -74,22 +74,22 @@ func New(opts ...func(*Vault) error) (*Vault, error) {
 	return &vault, nil
 }
 
-func Default(v *Vault, log *zerolog.Logger, vaultyCfg config.Config) error {
+func Default(v *Vault, log *zerolog.Logger, vltCfg config.Config) error {
 	cfg := api.DefaultConfig()
-	cfg.Address = vaultyCfg.VaultAddr
+	cfg.Address = vltCfg.VaultAddr
 
 	tlsCfg := &api.TLSConfig{}
 
-	if vaultyCfg.VaultCaCert != "" {
-		tlsCfg.CACert = vaultyCfg.VaultCaCert
+	if vltCfg.VaultCaCert != "" {
+		tlsCfg.CACert = vltCfg.VaultCaCert
 	}
 
-	if vaultyCfg.VaultClientCert != "" {
-		tlsCfg.ClientCert = vaultyCfg.VaultClientCert
+	if vltCfg.VaultClientCert != "" {
+		tlsCfg.ClientCert = vltCfg.VaultClientCert
 	}
 
-	if vaultyCfg.VaultClientKey != "" {
-		tlsCfg.ClientKey = vaultyCfg.VaultClientKey
+	if vltCfg.VaultClientKey != "" {
+		tlsCfg.ClientKey = vltCfg.VaultClientKey
 	}
 
 	err := cfg.ConfigureTLS(tlsCfg)
@@ -104,7 +104,7 @@ func Default(v *Vault, log *zerolog.Logger, vaultyCfg config.Config) error {
 		return err
 	}
 
-	client.SetToken(vaultyCfg.VaultToken)
+	client.SetToken(vltCfg.VaultToken)
 	var version string
 	// Check if the client is successfully created by making a request to Vault
 	health, err := client.Sys().Health()
@@ -114,8 +114,8 @@ func Default(v *Vault, log *zerolog.Logger, vaultyCfg config.Config) error {
 		version = health.Version
 	}
 	// Check for enterprise version and set namespace
-	if vaultyCfg.VaultNamespace != "" {
-		client.SetNamespace(vaultyCfg.VaultNamespace)
+	if vltCfg.VaultNamespace != "" {
+		client.SetNamespace(vltCfg.VaultNamespace)
 	}
 
 	log.Debug().Msg("Vault client successfully created and connected")

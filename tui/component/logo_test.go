@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/dkyanakiev/vaulty/tui/component"
-	"github.com/dkyanakiev/vaulty/tui/component/componentfakes"
+	"github.com/janosmiko/vlt/tui/component"
+	"github.com/janosmiko/vlt/tui/component/componentfakes"
 	"github.com/rivo/tview"
 	"github.com/stretchr/testify/require"
 )

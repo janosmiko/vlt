@@ -4,9 +4,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/dkyanakiev/vaulty/internal/state"
-	"github.com/dkyanakiev/vaulty/internal/watcher"
-	"github.com/dkyanakiev/vaulty/internal/watcher/watcherfakes"
+	"github.com/janosmiko/vlt/internal/state"
+	"github.com/janosmiko/vlt/internal/watcher"
+	"github.com/janosmiko/vlt/internal/watcher/watcherfakes"
 	"github.com/stretchr/testify/assert"
 )
 

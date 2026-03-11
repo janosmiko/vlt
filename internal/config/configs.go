@@ -21,9 +21,9 @@ type Config struct {
 	VaultCaCert       string `yaml:"vault_cacert"`
 	VaultClientCert   string `yaml:"vault_client_cert"`
 	VaultClientKey    string `yaml:"vault_client_key"`
-	VaultyLogFile     string `yaml:"vaulty_log_file"`
-	VaultyLogLevel    string `yaml:"vaulty_log_level"`
-	VaultyRefreshRate int    `yaml:"vaulty_refresh_rate"`
+	VltLogFile     string `yaml:"vlt_log_file"`
+	VltLogLevel    string `yaml:"vlt_log_level"`
+	VltRefreshRate int    `yaml:"vlt_refresh_rate"`
 }
 
 func LoadConfig(cfgFile string) Config {
@@ -36,7 +36,7 @@ func LoadConfig(cfgFile string) Config {
 
 	var data []byte
 	if cfgFile == "" {
-		yamlFilePath := filepath.Join(home, ".vaul7y.yaml")
+		yamlFilePath := filepath.Join(home, ".vlt.yaml")
 		if _, err := os.Stat(yamlFilePath); os.IsNotExist(err) {
 			fmt.Printf("Config file does not exist: %s\n", yamlFilePath)
 		} else {
@@ -97,18 +97,18 @@ func LoadConfig(cfgFile string) Config {
 	if vaultClientKey := os.Getenv("VAULT_CLIENT_KEY"); vaultClientKey != "" {
 		config.VaultClientKey = vaultClientKey
 	}
-	if vaultyLogFile := os.Getenv("VAULTY_LOG_FILE"); vaultyLogFile != "" {
-		config.VaultyLogFile = vaultyLogFile
+	if vltLogFile := os.Getenv("VLT_LOG_FILE"); vltLogFile != "" {
+		config.VltLogFile = vltLogFile
 	}
-	if vaultyLogLevel := os.Getenv("VAULTY_LOG_LEVEL"); vaultyLogLevel != "" {
-		config.VaultyLogLevel = vaultyLogLevel
+	if vltLogLevel := os.Getenv("VLT_LOG_LEVEL"); vltLogLevel != "" {
+		config.VltLogLevel = vltLogLevel
 	}
-	if vaultyRefreshRate := os.Getenv("VAULTY_REFRESH_RATE"); vaultyRefreshRate != "" {
-		vaultyRefreshRateInt, err := strconv.Atoi(vaultyRefreshRate)
+	if vltRefreshRate := os.Getenv("VLT_REFRESH_RATE"); vltRefreshRate != "" {
+		vltRefreshRateInt, err := strconv.Atoi(vltRefreshRate)
 		if err != nil {
-			fmt.Printf("Error converting VAULTY_REFRESH_RATE to int: %v", err)
+			fmt.Printf("Error converting VLT_REFRESH_RATE to int: %v", err)
 		} else {
-			config.VaultyRefreshRate = vaultyRefreshRateInt
+			config.VltRefreshRate = vltRefreshRateInt
 		}
 	}
 
@@ -139,11 +139,11 @@ func LoadConfig(cfgFile string) Config {
 		os.Exit(1)
 	}
 
-	if config.VaultyRefreshRate == 0 {
-		config.VaultyRefreshRate = 30
+	if config.VltRefreshRate == 0 {
+		config.VltRefreshRate = 30
 	}
 
-	if strings.EqualFold(config.VaultyLogLevel, "debug") {
+	if strings.EqualFold(config.VltLogLevel, "debug") {
 		go func() {
 			ch := make(chan os.Signal, 1)
 			signal.Notify(ch, syscall.SIGTERM)
@@ -153,7 +153,7 @@ func LoadConfig(cfgFile string) Config {
 			bufsize := int(10 * 1024 * 1024) // 10 MiB
 			buf := make([]byte, bufsize)
 			n := runtime.Stack(buf, true)
-			filename := fmt.Sprintf("%s.dump", config.VaultyLogFile)
+			filename := fmt.Sprintf("%s.dump", config.VltLogFile)
 
 			ioutil.WriteFile(filename, buf[:n], 0644)
 			os.Exit(1)

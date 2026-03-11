@@ -1,4 +1,4 @@
-module github.com/dkyanakiev/vaulty
+module github.com/janosmiko/vlt
 
 go 1.21
 

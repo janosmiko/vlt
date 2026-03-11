@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strconv"
 
-	primitive "github.com/dkyanakiev/vaulty/tui/primitives"
-	"github.com/dkyanakiev/vaulty/tui/styles"
+	primitive "github.com/janosmiko/vlt/tui/primitives"
+	"github.com/janosmiko/vlt/tui/styles"
 	"github.com/rivo/tview"
 	"github.com/rs/zerolog"
 )

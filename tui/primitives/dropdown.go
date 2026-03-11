@@ -3,7 +3,7 @@ package primitives
 import (
 	"github.com/rivo/tview"
 
-	"github.com/dkyanakiev/vaulty/tui/styles"
+	"github.com/janosmiko/vlt/tui/styles"
 )
 
 type DropDown struct {

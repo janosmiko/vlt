@@ -7,24 +7,24 @@ setup-test-data:
 
 .PHONY: install-osx
 install-osx:
-	cp ./bin/vaul7y/vaul7y /usr/local/bin/vaul7y
+	cp ./bin/vlt/vlt /usr/local/bin/vlt
 
 .PHONY: dev
 dev: ## Build for the current development version
-	@echo "==> Building Vaul7y..."
+	@echo "==> Building vlt..."
 	@mkdir -p ./bin
-	@CGO_ENABLED=0 go build -o ./bin/vaul7y ./cmd/vaul7y
-	@rm -f $(GOPATH)/bin/vaul7y
-	@cp ./bin/vaul7y/vaul7y $(GOPATH)/bin/vaul7y
+	@CGO_ENABLED=0 go build -o ./bin/vlt ./cmd/vlt
+	@rm -f $(GOPATH)/bin/vlt
+	@cp ./bin/vlt/vlt $(GOPATH)/bin/vlt
 	@echo "==> Done"
 
 .PHONY: build
 build:
-	go build -ldflags "-X main.version=`git tag --sort=-version:refname | head -n 1`" -o bin/vaul7y ./cmd/vaul7y
+	go build -ldflags "-X main.version=`git tag --sort=-version:refname | head -n 1`" -o bin/vlt ./cmd/vlt
 
 .PHONY: run
 run:
-	./bin/vaul7y
+	./bin/vlt
 
 .PHONY: test
 test:

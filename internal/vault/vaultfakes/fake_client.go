@@ -4,7 +4,7 @@ package vaultfakes
 import (
 	"sync"
 
-	"github.com/dkyanakiev/vaulty/internal/vault"
+	"github.com/janosmiko/vlt/internal/vault"
 )
 
 type FakeClient struct {

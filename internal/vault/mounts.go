@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/dkyanakiev/vaulty/internal/models"
+	"github.com/janosmiko/vlt/internal/models"
 	"github.com/hashicorp/vault/api"
 )
 

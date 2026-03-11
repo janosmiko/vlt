@@ -3,8 +3,8 @@ package vault_test
 import (
 	"testing"
 
-	"github.com/dkyanakiev/vaulty/internal/vault"
-	"github.com/dkyanakiev/vaulty/internal/vault/vaultfakes"
+	"github.com/janosmiko/vlt/internal/vault"
+	"github.com/janosmiko/vlt/internal/vault/vaultfakes"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -1,8 +1,8 @@
 package component
 
 import (
-	"github.com/dkyanakiev/vaulty/internal/models"
-	"github.com/dkyanakiev/vaulty/tui/primitives"
+	"github.com/janosmiko/vlt/internal/models"
+	"github.com/janosmiko/vlt/tui/primitives"
 
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"

@@ -4,7 +4,7 @@ package componentfakes
 import (
 	"sync"
 
-	"github.com/dkyanakiev/vaulty/tui/component"
+	"github.com/janosmiko/vlt/tui/component"
 	tcell "github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
 )

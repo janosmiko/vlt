@@ -3,8 +3,8 @@ package watcher
 import (
 	"time"
 
-	"github.com/dkyanakiev/vaulty/internal/models"
-	"github.com/dkyanakiev/vaulty/internal/state"
+	"github.com/janosmiko/vlt/internal/models"
+	"github.com/janosmiko/vlt/internal/state"
 	"github.com/hashicorp/vault/api"
 	"github.com/rs/zerolog"
 )

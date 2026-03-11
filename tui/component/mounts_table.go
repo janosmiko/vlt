@@ -5,9 +5,9 @@ import (
 	"sort"
 	"time"
 
-	"github.com/dkyanakiev/vaulty/internal/models"
-	primitive "github.com/dkyanakiev/vaulty/tui/primitives"
-	"github.com/dkyanakiev/vaulty/tui/styles"
+	"github.com/janosmiko/vlt/internal/models"
+	primitive "github.com/janosmiko/vlt/tui/primitives"
+	"github.com/janosmiko/vlt/tui/styles"
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
 	"github.com/rs/zerolog"

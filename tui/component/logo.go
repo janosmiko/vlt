@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	primitive "github.com/dkyanakiev/vaulty/tui/primitives"
+	primitive "github.com/janosmiko/vlt/tui/primitives"
 	"github.com/rivo/tview"
 )
 
@@ -16,7 +16,7 @@ var LogoASCII = []string{
 	`  \     /  / __ \|  |  /  |__/    / \___  |`,
 	`   \___/  (____  /____/|____/____/  / ____|`,
 	`			    \/                   \/     `,
-	`[#26ffe6]Vaul7y - Terminal Dashboard`,
+	`[#26ffe6]vlt - Terminal Dashboard`,
 }
 
 type Logo struct {

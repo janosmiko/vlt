@@ -1,7 +1,7 @@
 package component
 
 import (
-	"github.com/dkyanakiev/vaulty/tui/primitives"
+	"github.com/janosmiko/vlt/tui/primitives"
 	"github.com/rivo/tview"
 )
 

@@ -6,46 +6,46 @@
 ### Brew
 
 ```shell
-brew install dkyanakiev/tap/vaul7y
+brew install janosmiko/tap/vlt
 ```
 to upgrade
 ```shell
-brew update && brew upgrade vaul7y
+brew update && brew upgrade vlt
 ```
 
 ### Download from GitHub
 
 Download the relevant binary for your operating system (macOS = Darwin) from
-the [latest Github release](https://github.com/dkyanakiev/vaul7y/releases). Unpack it, then move the binary to
-somewhere accessible in your `PATH`, e.g. `mv ./vaul7y /usr/local/bin`.
+the [latest Github release](https://github.com/janosmiko/vlt/releases). Unpack it, then move the binary to
+somewhere accessible in your `PATH`, e.g. `mv ./vlt /usr/local/bin`.
 
 ### > Using [go installed on your machine](https://go.dev/doc/install)
 
 ```shell
-go install github.com/dkyanakiev/vaul7y@latest
+go install github.com/janosmiko/vlt@latest
 ```
 
-### Building from source and Run Vaul7y
+### Building from source and Run vlt
 
 Make sure you have your go environment setup:
 
 1. Clone the project
 1. Run `$ make build` to build the binary
 1. Run `$ make run` to run the binary
-1. You can use `$ make install-osx` on a Mac to cp the binary to `/usr/local/bin/vaul7y`
+1. You can use `$ make install-osx` on a Mac to cp the binary to `/usr/local/bin/vlt`
 
 or
 
 ```
-$ go install ./cmd/vaul7y
+$ go install ./cmd/vlt
 ```
 
 ### How to use it
 
-Once `Vaul7y` is installed and avialable in your path, simply run:
+Once `vlt` is installed and avialable in your path, simply run:
 
 ```
-$ vaul7y
+$ vlt
 ```
 
 ![image](../images/screen1.png)
@@ -61,11 +61,11 @@ Required:
 
 For the full list see the [official docs](https://developer.hashicorp.com/vault/docs/commands#environment-variables)
 
-Another option is to store your configs in yaml file named `.vaul7y.yaml` stored in your home directory.  
-Example: [`~/myuser/.vaul7y.yaml`](./examples/vaul7y.yaml)
+Another option is to store your configs in yaml file named `.vlt.yaml` stored in your home directory.  
+Example: [`~/myuser/.vlt.yaml`](./examples/vlt.yaml)
 
 Or alternatively pass a config file as an argument using `-c <path/file.yaml>`  
-Example: `vaul7y -c ./new-env.yml`
+Example: `vlt -c ./new-env.yml`
 
 #### Authentication and variables priority
 Variables will be loaded in the following order, with the next superseding the previous ones:

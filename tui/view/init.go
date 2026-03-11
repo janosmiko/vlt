@@ -3,9 +3,9 @@ package view
 import (
 	"fmt"
 
-	"github.com/dkyanakiev/vaulty/internal/models"
-	"github.com/dkyanakiev/vaulty/tui/component"
-	"github.com/dkyanakiev/vaulty/tui/styles"
+	"github.com/janosmiko/vlt/internal/models"
+	"github.com/janosmiko/vlt/tui/component"
+	"github.com/janosmiko/vlt/tui/styles"
 	"github.com/gdamore/tcell/v2"
 )
 

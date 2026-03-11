@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/dkyanakiev/vaulty/tui/component"
-	"github.com/dkyanakiev/vaulty/tui/component/componentfakes"
+	"github.com/janosmiko/vlt/tui/component"
+	"github.com/janosmiko/vlt/tui/component/componentfakes"
 	"github.com/gdamore/tcell/v2"
 	"github.com/hashicorp/vault/api"
 	"github.com/rivo/tview"

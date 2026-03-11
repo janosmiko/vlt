@@ -3,7 +3,7 @@ name: Bug report
 about: Create a report to help us improve
 title: ''
 labels: bug
-assignees: dkyanakiev
+assignees: janosmiko
 
 ---
 
@@ -27,7 +27,7 @@ If applicable, add screenshots to help explain your problem.
  - Terminal [e.g. iterm2]
  - Version [e.g. v0.5.1 or how it was installed if "built from source"]
  - Vault cluster version. The full version string would indicate if its Ent or Oss version
- - Configuration options used, e.g. cli arguments, env vars, and/or `.vaul7y.yml` file
+ - Configuration options used, e.g. cli arguments, env vars, and/or `.vlt.yml` file
  - Vault permission policy (if applicable) 
 
 **Additional context**

@@ -32,7 +32,7 @@ App crashing when updating secret and pressing S key
 
 ## Fixed
 
-- Fixing issue where vaulty will error if no config file is provided.
+- Fixing issue where vlt will error if no config file is provided.
 
 ## [0.1.4] - 2024-04-17
 
@@ -111,8 +111,8 @@ App crashing when updating secret and pressing S key
 ### Added
 - Job filtering on secrets and mount views
 - Better navigation options between views
-- `vaul7y -v` to check the version
-- Added a check and error out to prevent vaul7y from freezing if vault token and address are not set
+- `vlt -v` to check the version
+- Added a check and error out to prevent vlt from freezing if vault token and address are not set
 
 ### Fixed
 - Error and Info modals tabbing out and changing focus

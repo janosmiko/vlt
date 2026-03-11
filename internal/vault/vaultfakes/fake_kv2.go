@@ -5,7 +5,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/dkyanakiev/vaulty/internal/vault"
+	"github.com/janosmiko/vlt/internal/vault"
 	"github.com/hashicorp/vault/api"
 )
 
